@@ -7,7 +7,7 @@ const stylesMarginFix = {
 
 const CategoriesPage = () => (
     <section style={stylesMarginFix}>
-    <h1>This is the Categories Page (under construction)</h1>
+    <h1>Categories Page</h1>
     <CategoriesList />
   </section>
 );

@@ -12,6 +12,10 @@
 Check the live demo of my page [here](https://legendary-lollipop-bc2bf5.netlify.app/)
 ```
 
+## Video Presentation
+
+[Loom video](https://www.loom.com/share/b836f21d6e9e4cf2a98a80739a2419fb)
+
 ## Setup
 
 Follow these steps on your console to properly clone this repository on your desktop:
