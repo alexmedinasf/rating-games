@@ -1,0 +1,24 @@
+.homepage-container {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.homepage-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.homepage-container h1 {
+  background-color: #35548b;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #fdfbfe;
+  padding: 0.5rem 1rem;
+  margin-top: -0.3rem;
+}
+
+.homepage-container p {
+  text-align: center;
+  color: #fdfbfe;
+  padding: 0.5rem 1rem;
+}
