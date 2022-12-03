@@ -9,13 +9,6 @@ import DetailsPage from './pages/details-page/details-page';
 import './styles/app.css';
 
 function App() {
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getCategoriesFromApi());
-  //   dispatch(getGamesFromApi());
-  // }, []);
-
   return (
     <BrowserRouter>
       <Navbar />

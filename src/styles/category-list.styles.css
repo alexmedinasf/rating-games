@@ -1,6 +1,13 @@
-.category-list-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+.category-list {
+    color: #fff;
   }
   
+  .category-list-title {
+   background-color: #35548b;
+  }
+
+.category-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
+  }
