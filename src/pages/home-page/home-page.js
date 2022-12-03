@@ -24,17 +24,17 @@ const HomePage = () => {
       {(count !== 773625) ? (
         <p>
           Showing
-            {' '}
-            {count}
-            {' '}
+          {' '}
+          {count}
+          {' '}
           results
         </p>
       ) : (
-          <p>
+        <p>
           Showing
-              {' '}
-              {amountOfGames}
-              {' '}
+            {' '}
+            {amountOfGames}
+            {' '}
           results
         </p>
       )}
