@@ -5,4 +5,19 @@
     column-gap: 0.4rem;
     row-gap: 0.4rem;
   }
+
+  filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
   
+  .filter-des {
+    font-size: 0.9rem;
+  }
+  
+  .filter-selector {
+    border: 1px solid #fdfbfe;
+    background-color: #435c8d;
+    color: #fdfbfe;
+  }

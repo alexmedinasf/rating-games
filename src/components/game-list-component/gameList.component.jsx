@@ -1,24 +1,47 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import GameBlock from '../game-block-component/gameBlock.component';
 import '../../styles/game-list.styles.css';
 
-const GamesList = () => {
-    const games = useSelector((state) => state.games.gamesList);
+const GamesList = ({ handleFilter }) => {
+    const allGames = useSelector((state) => state.games.gamesList);
+    const filterInput = useRef();
+  
+    const [filtered, setFiltered] = useState([]);
 
   return (
-    <section className="game-list-container">
-      {games.map((game) => (
-        <GameBlock
-        title={game.gameName}
-        rating={game.rating}
-        gameImage={game.gameImage}
-        id={game.id}
-        key={game.id}
-      />
-      ))}
-    </section>
+    <>
+      <div className="filter-container">
+        <p className="filter-des">Filter games by rating</p>
+        <select className="filter-selector" ref={filterInput} onChange={() => handleFilter(allGames, filterInput.current.value)}>
+          <option value="All Games">All Games</option>
+          <option value="4">4-5</option>
+          <option value="3">3-4</option>
+          <option value="2">2-3</option>
+          <option value="1">1-2</option>
+          <option value="0">0-1</option>
+        </select>
+      </div>
+
+      <section className="game-list-container">
+        {filtered.map((game) => (
+          <GameBlock
+            title={game.gameName}
+            rating={game.rating}
+            gameImage={game.gameImage}
+            id={game.id}
+            key={game.id}
+          />
+        ))}
+      </section>
+    </>
+
   );
 };
+
+GamesList.propTypes = {
+    handleFilter: PropTypes.func.isRequired,
+  };
 
 export default GamesList;
