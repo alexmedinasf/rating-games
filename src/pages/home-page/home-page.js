@@ -19,27 +19,27 @@ const HomePage = () => {
 
   return (
     <section className="homepage-container">
-        <img src={mainBackgroundImage} alt="space background" />
-        <h1>Check out this games</h1>
-        {(count !== 773625) ? (
-            <p>
+      <img src={mainBackgroundImage} alt="space background" />
+      <h1>Check out this games</h1>
+      {(count !== 773625) ? (
+          <p>
           Showing
-            {' '}
-            {count}
-            {' '}
+              {' '}
+              {count}
+              {' '}
           results
             </p>
         ) : (
-          <p>
+            <p>
           Showing
-          {' '}
-          {amountOfGames}
-          {' '}
+            {' '}
+            {amountOfGames}
+            {' '}
           results
-        </p>
+          </p>
         )}
-        <GamesList className="game-list-container" handleFilter={handleFilter} />
-      </section>
+      <GamesList className="game-list-container" handleFilter={handleFilter} />
+    </section>
   );
 };
 
