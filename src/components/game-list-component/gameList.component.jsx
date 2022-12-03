@@ -8,13 +8,22 @@ const GamesList = ({ handleFilter }) => {
     const allGames = useSelector((state) => state.games.gamesList);
     const filterInput = useRef();
   
-    const [filtered, setFiltered] = useState([]);
+    const [filtered, setFiltered] = useState(21);
+
+  const returnFilterData = (allGames, minRate) => {
+    const filteredGames = handleFilter(allGames, minRate);
+    setFiltered(filteredGames);
+  };
 
   return (
     <>
       <div className="filter-container">
         <p className="filter-des">Filter games by rating</p>
-        <select className="filter-selector" ref={filterInput} onChange={() => handleFilter(allGames, filterInput.current.value)}>
+        <select
+          className="filter-selector"
+          ref={filterInput}
+          onChange={() => returnFilterData(allGames, filterInput.current.value)}
+        >
           <option value="All Games">All Games</option>
           <option value="4">4-5</option>
           <option value="3">3-4</option>
@@ -25,15 +34,27 @@ const GamesList = ({ handleFilter }) => {
       </div>
 
       <section className="game-list-container">
-        {filtered.map((game) => (
-          <GameBlock
-            title={game.gameName}
-            rating={game.rating}
-            gameImage={game.gameImage}
-            id={game.id}
-            key={game.id}
-          />
-        ))}
+      {(filtered !== 21) ? (
+          filtered.map((game) => (
+            <GameBlock
+              title={game.gameName}
+              rating={game.rating}
+              gameImage={game.gameImage}
+              id={game.id}
+              key={game.id}
+            />
+          ))
+        ) : (
+          allGames.map((game) => (
+            <GameBlock
+              title={game.gameName}
+              rating={game.rating}
+              gameImage={game.gameImage}
+              id={game.id}
+              key={game.id}
+            />
+          ))
+        )}
       </section>
     </>
 

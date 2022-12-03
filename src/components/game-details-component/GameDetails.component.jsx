@@ -1,13 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa';
 import '../../styles/game-details.styles.css';
 
-const GameDetails = () => {
-    const game = useSelector((state) => state.games.gameDetails);
-
-    const { developers } = game;
+const GameDetails = (props) => {
+  const {
+    gameName,
+    gameImage,
+    gameRating,
+    gameMeta,
+    gameReleased,
+    gameDes,
+    gameTime,
+  } = props;
 
   return (
     <section className="game-details-container">
@@ -18,21 +24,21 @@ const GameDetails = () => {
         >
           <FaRegArrowAltCircleLeft className="back-arrow" />
         </Link>
-        <img src={game.background_image} alt="game visual description" />
+        <img src={gameImage} alt="game visual description" />
       </div>
-      <h3>{game.name}</h3>
+      <h3>{gameName}</h3>
       <article className="info-container">
         <div className="rates-container">
           <p>
             Overal Rating
             {' '}
-            {game.rating}
+            {gameRating}
             /5
           </p>
           <p>
             Metacritic Rating
             {' '}
-            {game.metacritic}
+            {gameMeta}
             /100
           </p>
         </div>
@@ -41,23 +47,32 @@ const GameDetails = () => {
           <p>
             Released:
             {' '}
-            {game.released}
+            {gameReleased}
           </p>
 
-          <div>
-            Developers:
+          <p>
+            Playtime:
             {' '}
-            {developers.map((developer) => (
-              `<p>${developer.name}<p/>`
-            ))}
-          </div>
+            {gameTime}
+          </p>
 
         </div>
       </article>
 
-      <p className="main-description">{game.description_raw}</p>
+      <p className="main-description">{gameDes}</p>
+
     </section>
   );
+};
+
+GameDetails.propTypes = {
+  gameName: PropTypes.string.isRequired,
+  gameImage: PropTypes.string.isRequired,
+  gameDes: PropTypes.string.isRequired,
+  gameReleased: PropTypes.string.isRequired,
+  gameRating: PropTypes.number.isRequired,
+  gameMeta: PropTypes.number.isRequired,
+  gameTime: PropTypes.number.isRequired,
 };
 
 export default GameDetails;

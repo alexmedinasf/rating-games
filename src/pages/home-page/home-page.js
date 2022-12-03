@@ -14,6 +14,7 @@ const HomePage = () => {
   const handleFilter = (allGames, minRate) => {
     const filteredGames = filterData(allGames, minRate);
     setCount(filteredGames.length);
+    return filteredGames;
   };
   
     return (
