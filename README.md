@@ -1,4 +1,4 @@
-> This repository contains an web app that will show you a list of video games with their user rating and also you'll be able to check for more details if you click on any game like the released date, metacritic score, etc...
+> This repository contains an web app that will show a list of video games with their ratings and also you'll be able to check for more details if you click on any game.
 ## Built With
 
 - React.js
@@ -9,7 +9,7 @@
 
 ## Live Demo
 ```
-Check the live demo of my page [here](https://sage-syrniki-f6b47a.netlify.app/)
+Check the live demo of my page [here](https://legendary-lollipop-bc2bf5.netlify.app/)
 ```
 
 ## Setup
