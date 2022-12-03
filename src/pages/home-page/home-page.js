@@ -32,9 +32,9 @@ const HomePage = () => {
       ) : (
         <p>
           Showing
-            {' '}
-            {amountOfGames}
-            {' '}
+          {' '}
+          {amountOfGames}
+          {' '}
           results
         </p>
       )}
