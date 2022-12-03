@@ -1,11 +1,27 @@
 import React from 'react';
-import CategoriesList from '../../components/categories-component/CategoriesList.component';
+import { useSelector } from 'react-redux';
+import GamesList from '../../components/game-list-component/GameList.component';
+import mainBackgroundImage from '../../assets/images/main-background-image.webp';
+import '../../styles/homepage.styles.css';
 
-const HomePage = () => (
-    <section>
-      <h1>This is the home page that shows the categories</h1>
-    <CategoriesList />
-    </section>
-  );
+const HomePage = () => {
+    const games = useSelector((state) => state.games.gamesList);
+    const amountOfGames = games.length;
+  
+    return (
+      <section className="homepage-container">
+        <img src={mainBackgroundImage} alt="space background" />
+        <h1>Check out this games</h1>
+        <p>
+          Showing
+          {' '}
+          {amountOfGames}
+          {' '}
+          results
+        </p>
+        <GamesList className="game-list-container" />
+      </section>
+    );
+  };
   
   export default HomePage;

@@ -3,9 +3,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar.component';
 import HomePage from './pages/home-page/home-page';
+import CategoriesPage from './pages/categories-page/categories-page';
 import DetailsPage from './pages/details-page/details-page';
-// import getGamesFromApi from './services/gamesApi';
-// import getCategoriesFromApi from './services/categoryApi';
 import './styles/app.css';
 
 function App() {
@@ -14,7 +13,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/details" element={<DetailsPage />} />
+        <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/game-details" element={<DetailsPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,10 +1,10 @@
 import React from 'react';
-import GamesList from '../../components/game-list-component/GameList.component';
+// import GameDetails from '../../components/game-details-component/GameDetails.component';
 
 const DetailsPage = () => (
   <section>
-    <h1>This is the details page</h1>
-    <GamesList />
+    <h1>This is the details Page of each game</h1>
+    {/* <GameDetails /> */}
   </section>
 );
 
