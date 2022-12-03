@@ -1,24 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import { useDispatch } from 'react-redux';
 
 const GameBlock = (props) => {
-  const { title, image } = props;
+  const { title, rating } = props;
 
+  // const dispatch = useDispatch();
 
   return (
     <section className="game-container">
-      <div className="image-container">
-      <img src={image} alt="Game of the year" />
-      </div>
-
-      <h2 className="game-title">{title}</h2>
+      <h4 className="game-title">{title}</h4>
+      <p className="game-rating">{rating}</p>
     </section>
   );
 };
 
 GameBlock.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
 };
 
 export default GameBlock;

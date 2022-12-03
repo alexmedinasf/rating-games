@@ -9,7 +9,7 @@ const GamesList = () => {
     <section className="game-list-container">
         <h3>Games</h3>
       {games.map((game) => (
-        <GameBlock title={game.gameName} image={game.image} key={game.id} />
+        <GameBlock title={game.gameName} rating={game.rating} key={game.id} />
       ))}
     </section>
   );

@@ -9,7 +9,7 @@ const fetchCategories = (gameCategories) => ({
 
 // Initial State
 const preloadedState = {
-  gamesList: [],
+    gameCategories: [],
 };
 
 // Reducer for Categories
@@ -18,7 +18,7 @@ const categoriesReducer = (state = preloadedState, action = {}) => {
     case FETCH_CATEGORIES:
       return {
         ...state,
-        categoriesList: action.payload,
+        gameCategories: action.payload,
       };
 
     default:
