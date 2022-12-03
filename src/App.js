@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/navbar.component';
 import HomePage from './pages/home-page/home-page';
