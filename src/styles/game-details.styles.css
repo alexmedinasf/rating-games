@@ -1,0 +1,41 @@
+.game-details-container {
+    display: flex;
+    color: #fdfbfe;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-arrow-container {
+    position: relative;
+    width: 90%;
+    height: 20rem;
+    margin: 2rem 0 1rem;
+  }
+  
+  .image-arrow-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .back-arrow {
+    position: absolute;
+  }
+  
+  .info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+  
+  .info-container p {
+    font-size: 0.8rem;
+  }
+  
+  .rates-container {
+    margin-right: 1rem;
+  }
+  
