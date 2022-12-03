@@ -8,9 +8,8 @@
 - Git & Github
 
 ## Live Demo
-```
+
 Check the live demo of my page [here](https://legendary-lollipop-bc2bf5.netlify.app/)
-```
 
 ## Video Presentation
 
