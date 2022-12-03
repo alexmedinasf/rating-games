@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import GamesList from '../../components/game-list-component/GameList.component';
+import GamesList from '../../components/game-list-component/gameList.component';
 import mainBackgroundImage from '../../assets/images/main-background-image.webp';
 import '../../styles/homepage.styles.css';
 

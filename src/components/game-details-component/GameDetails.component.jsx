@@ -1,7 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const GameDetails = () => {
-  const game = [];
+    const game = useSelector((state) => state.games.gameDetails);
   console.log(game);
 
   return (

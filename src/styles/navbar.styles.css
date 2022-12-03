@@ -34,6 +34,7 @@
   .nav-links {
     display: flex;
     list-style: none;
+    margin-right: 1rem;
   }
   
   .nav-links li {
@@ -60,4 +61,3 @@
     color: #cdccce;
     text-decoration: underline;
   }
-  

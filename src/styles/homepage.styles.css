@@ -1,5 +1,6 @@
 .homepage-container {
     position: relative;
+    margin-top: 2.5rem;
   }
   
   .homepage-container img {
@@ -21,4 +22,3 @@
     color: #fdfbfe;
     padding: 0.5rem 1rem;
   }
-  

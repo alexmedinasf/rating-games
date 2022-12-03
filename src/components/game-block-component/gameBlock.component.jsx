@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
+import { getGameDetailsFromApi } from '../../services/gamesApi';
 import '../../styles/game-block.styles.css';
 
 const GameBlock = (props) => {
@@ -10,11 +10,20 @@ const GameBlock = (props) => {
         title, rating, gameImage, id,
       } = props;
 
-  // const dispatch = useDispatch();
+      const handleClick = (id) => {
+        getGameDetailsFromApi(id);
+      };
 
   return (
     <section className="game-container">
-      <Link to="/game-details" className="game-link-a">
+      <Link
+        to="/game-details"
+        className="game-link-a"
+        gameId={id}
+        onClick={
+          handleClick(id)
+        }
+      >
         <img src={gameImage} alt="Category visual description" className="game-image" />
         <FaRegArrowAltCircleRight className="arrow-top" />
         <h4 className="game-title" id={id}>{title}</h4>

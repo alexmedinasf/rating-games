@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import GameBlock from '../game-block-component/GameBlock.component';
+import GameBlock from '../game-block-component/gameBlock.component';
 import '../../styles/game-list.styles.css';
 
 const GamesList = () => {
