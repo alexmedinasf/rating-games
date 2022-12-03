@@ -1,5 +1,5 @@
-import { compose, applyMiddleware } from 'redux';
-import { configureStore } from '@reduxjs/toolkit';
+import { compose, applyMiddleware, createStore } from 'redux';
+// import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
@@ -12,7 +12,6 @@ const middlewares = [
 
 const composedEnhancers = compose(applyMiddleware(...middlewares));
 
-const store = configureStore(rootReducer, undefined, composedEnhancers);
+const store = createStore(rootReducer, undefined, composedEnhancers);
 
 export default store;
-    

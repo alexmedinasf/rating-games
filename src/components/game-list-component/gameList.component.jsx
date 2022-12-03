@@ -1,14 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import GameBlock from '../game-block-component/gameBlock.component';
+import GameBlock from '../game-block-component/GameBlock.component';
 
 const GamesList = () => {
-  const games = useSelector((state) => state.games);
+    const games = useSelector((state) => state.games.gamesList);
 
   return (
     <section className="game-list-container">
+        <h3>Games</h3>
       {games.map((game) => (
-        <GameBlock title={game.title} img={game.img} />
+        <GameBlock title={game.gameName} image={game.image} key={game.id} />
       ))}
     </section>
   );

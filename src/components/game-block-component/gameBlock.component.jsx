@@ -8,7 +8,7 @@ const GameBlock = (props) => {
   return (
     <section className="game-container">
       <div className="image-container">
-        <img src={image} alt="Picture of a game" />
+      <img src={image} alt="Game of the year" />
       </div>
 
       <h2 className="game-title">{title}</h2>
