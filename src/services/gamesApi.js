@@ -33,15 +33,15 @@ const getGamesFromApi = () => async (dispatch) => {
 };
 
 const getGameDetailsFromApi = (id) => async (dispatch) => {
-    const gameUrl = `${gameDetailsUrl}${id}${apiKey}`;
-     const data = await fetch(gameUrl);
-     const response = await data.json();
-  
-     const gameDetails = await response;
+  const gameUrl = `${gameDetailsUrl}${id}${apiKey}`;
+  const data = await fetch(gameUrl);
+  const response = await data.json();
+
+  const gameDetails = await response;
 
   dispatch(fetchGamesDetails(gameDetails));
 
   return null;
 };
-    
-    export { getGamesFromApi, getGameDetailsFromApi };
+ 
+export { getGamesFromApi, getGameDetailsFromApi };

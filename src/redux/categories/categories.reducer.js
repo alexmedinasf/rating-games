@@ -9,7 +9,7 @@ const fetchCategories = (gameCategories) => ({
 
 // Initial State
 const preloadedState = {
-    gameCategories: [],
+  gameCategories: [],
 };
 
 // Reducer for Categories

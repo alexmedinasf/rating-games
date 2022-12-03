@@ -7,9 +7,9 @@ const fetchGames = (gamesList) => ({
 });
 
 const fetchGamesDetails = (gameDetails) => ({
-    type: FETCH_GAME_DETAILS,
-    payload: gameDetails,
-  });
+  type: FETCH_GAME_DETAILS,
+  payload: gameDetails,
+});
 
 const preloadedState = {
   gamesList: [],
@@ -24,7 +24,7 @@ const gamesReducer = (state = preloadedState, action = {}) => {
         gamesList: action.payload,
       };
 
-      case FETCH_GAME_DETAILS:
+    case FETCH_GAME_DETAILS:
       return {
         ...state,
         gameDetails: action.payload,
