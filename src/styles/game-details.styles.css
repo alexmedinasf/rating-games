@@ -38,4 +38,8 @@
   .rates-container {
     margin-right: 1rem;
   }
-  
+
+  .main-description {
+    line-height: 1.3rem;
+    padding: 0 1.1rem;
+  }

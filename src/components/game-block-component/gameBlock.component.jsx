@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux/es/exports';
+import { useDispatch } from 'react-redux';
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import { getGameDetailsFromApi } from '../../services/gamesApi';
 import '../../styles/game-block.styles.css';
@@ -20,6 +20,7 @@ const GameBlock = (props) => {
   return (
     <section className="game-container">
       <Link
+        title="details-page"
         to="/game-details"
         className="game-link-a"
          onClick={() => {
