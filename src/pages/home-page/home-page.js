@@ -18,19 +18,19 @@ const HomePage = () => {
   };
 
   return (
-      <section className="homepage-container">
+    <section className="homepage-container">
         <img src={mainBackgroundImage} alt="space background" />
         <h1>Check out this games</h1>
         {(count !== 773625) ? (
-          <p>
+            <p>
           Showing
-          {' '}
-          {count}
-          {' '}
+            {' '}
+            {count}
+            {' '}
           results
-        </p>
+            </p>
         ) : (
-        <p>
+          <p>
           Showing
           {' '}
           {amountOfGames}

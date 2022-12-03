@@ -43,5 +43,5 @@ const getGameDetailsFromApi = (id) => async (dispatch) => {
 
   return null;
 };
- 
+
 export { getGamesFromApi, getGameDetailsFromApi };
