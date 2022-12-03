@@ -22,22 +22,22 @@ const HomePage = () => {
       <img src={mainBackgroundImage} alt="space background" />
       <h1>Check out this games</h1>
       {(count !== 773625) ? (
+        <p>
+          Showing
+            {' '}
+            {count}
+            {' '}
+          results
+        </p>
+      ) : (
           <p>
           Showing
               {' '}
-              {count}
+              {amountOfGames}
               {' '}
           results
-            </p>
-        ) : (
-            <p>
-          Showing
-            {' '}
-            {amountOfGames}
-            {' '}
-          results
-          </p>
-        )}
+        </p>
+      )}
       <GamesList className="game-list-container" handleFilter={handleFilter} />
     </section>
   );
