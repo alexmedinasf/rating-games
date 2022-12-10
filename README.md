@@ -5,7 +5,6 @@
 - HTML
 - CSS
 - Javascript
-- Git & Github
 
 ## Live Demo
 
